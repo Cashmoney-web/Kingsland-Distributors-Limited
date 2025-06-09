@@ -132,6 +132,50 @@ body {
 }
 
 
+
+/* General Call to Action Button Style */
+.cta-btn {
+    display: inline-block;
+    background-color: var(--accent-color); /* Gold */
+    color: #ffffff; /* White text */
+    padding: 0.8rem 2.0rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    background-color: #b88e2a; /* Darker gold */
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+/* Specific styles for the call button on the contact page */
+.contact-info .mobile-call-btn {
+    margin-top: 15px;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-info .mobile-call-btn::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; 
+    content: "\f095"; /* Phone icon unicode */
+    margin-right: 8px;
+    font-size: 0.9em; /* Relative to button's font size */
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -1864,4 +1908,135 @@ input, textarea {
     .about-hero-left h1 {
         font-size: 1.8rem;
     }
+}
+
+/* --- Styling for the WhatsApp Icon (Black, Bigger, No background) --- */
+.whatsapp-order-btn {
+    display: inline-block; /* Essential for applying transforms and margin */
+    margin-top: 15px; /* Keep spacing from description */
+    text-decoration: none; /* Remove underline */
+    color: #000000; /* Set icon color to black */
+    font-size: 50px; /* Make the icon significantly bigger. Adjust as needed. */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover transition */
+    cursor: pointer;
+    /* Ensure no background or button-like styling */
+    background-color: transparent;
+    border: none; /* Make sure no border is present */
+    padding: 0;
+    box-shadow: none;
+    width: auto; /* Allow width to adapt to content */
+    height: auto; /* Allow height to adapt to content */
+}
+
+.whatsapp-order-btn:hover {
+    color: #25D366; /* Change icon to WhatsApp green on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.whatsapp-order-btn:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* Ensure the icon itself inherits color and size from its parent link */
+.whatsapp-order-btn i.fab {
+    color: inherit;
+    font-size: inherit;
+}
+
+/* --- Optional: Adjust product card padding if the button's size changes significantly --- */
+.product-info {
+    /* Keep existing flex properties for content distribution */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 20px; /* Adjust bottom padding as needed after button changes */
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+}
+
+/* --- Search Bar Styling --- */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto; /* Center the search bar and add vertical space */
+    max-width: 600px; /* Limit its width */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures borders are contained */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.search-bar-container input[type="text"] {
+    flex-grow: 1; /* Allows input field to take up most space */
+    padding: 12px 20px;
+    border: none; /* Remove default input border */
+    outline: none; /* Remove outline on focus */
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f8f8; /* Light background for input */
+}
+
+.search-bar-container input[type="text"]::placeholder {
+    color: #888;
+}
+
+.search-bar-container button {
+    background-color: var(--accent-color); /* Use your accent color */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px; /* Icon size */
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.search-bar-container button:hover {
+    background-color: #c79a2f; /* Slightly darker accent color on hover */
+}
+
+.products-hero-left h1 .highlight {
+    position: relative; /* Essential for positioning the pseudo-element */
+    display: inline-block; /* Allows width/height for pseudo-element */
+    /* You might have a text-decoration: underline or similar for initial visual */
+    text-decoration: underline; /* This is in your screenshot */
+    text-underline-offset: 8px; /* Example offset */
+    text-decoration-color: transparent; /* Make initial underline transparent if animating it */
+}
+
+/* This is the line that will be animated */
+.products-hero-left h1 .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust to position the line below the text */
+    width: 0; /* Start with no width */
+    height: 4px; /* Thickness of the line */
+    background-color: var(--accent-color); /* Your accent color, e.g., gold */
+    transition: width 0.8s ease-out; /* Fallback for no JS, or initial state */
+    /* Or use transform for more robust animation with GSAP */
+    transform: scaleX(0); /* Initial state: no width */
+    transform-origin: left; /* Animation starts from the left */
+}
+
+/* In your style.css */
+
+/* Remove any previous text-decoration underline from the highlight span */
+.products-hero-left h1 .highlight {
+    position: relative; /* Keep this to position the SVG absolutely */
+    display: inline-block; /* Essential for containing the SVG */
+    /* Remove or comment out any text-decoration related properties here */
+    text-decoration: none; /* Ensure no default underline */
+}
+
+.animated-underline {
+    position: absolute;
+    bottom: -5px; /* Adjust this value to position the line below the text */
+    left: 0;
+    width: 100%; /* Make SVG span the full width of its parent .highlight */
+    height: 10px; /* Height of the SVG viewBox */
+    overflow: visible; /* Ensure path doesn't get clipped if it goes outside viewBox */
 }

@@ -35,7 +35,11 @@
     <section class="products-hero-section">
         <div class="section-content products-hero-grid">
             <div class="products-hero-left">
-                <h1>Discover Our Exquisite Selection of <span class="highlight">Premium Spirits</span></h1>
+                <h1>Discover Our Exquisite Selection of <span class="highlight">Premium Spirits
+                <svg class="animated-underline" viewBox="0 0 200 10" preserveAspectRatio="none">
+                    <path d="M 0 5 C 50 0, 150 10, 200 5" stroke="#d4af37" stroke-width="3" fill="none"/>
+                </svg>
+            </span></h1>
             </div>
             <div class="products-hero-right">
                 <p>At Kingsland Distributors Ltd, we pride ourselves on offering an unparalleled selection of premium spirits. Our catalog features the finest liquors from around the globe, each carefully selected for its exceptional quality and unique character. Explore our collection and discover the perfect spirit for every occasion.</p>
@@ -45,39 +49,450 @@
 
     <section class="products-listing">
         <div class="section-content">
+            <div class="search-bar-container">
+                <input type="text" id="productSearch" placeholder="Search for products..." class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
             <div class="products-grid-container">
-                <div class="product-card">
+                <!-- <div class="product-card">
                     <div class="product-image">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/pascal-van-soest-NDZl3MpP9NA-unsplash.jpg" alt="Glenfiddich 21 Year" loading="lazy">
+                         <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/moet-chandon-imperial-brut.jpg" alt="Moët & Chandon Impérial Brut" loading="lazy">
+                    </div>
+                        <div class="product-info">
+                            <h3>Moët & Chandon Impérial Brut</h3>
+                            <p>The iconic house champagne, Impérial Brut is celebrated for its bright fruitiness, seductive palate, and elegant maturity. Perfect for any celebration.</p>
+                             <a href="javascript:void(0);" onclick="openWhatsApp('Moët & Chandon Impérial Brut')" class="whatsapp-order-btn">Order via WhatsApp</a>
+                        </div>
+                </div>
+
+                <div class="product-card">
+                     <div class="product-image">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/moet-chandon-imperial-brut.jpg" alt="Moët & Chandon Impérial Brut" loading="lazy">
                     </div>
                     <div class="product-info">
-                        <h3>Glenfiddich 21 Year</h3>
-                        <p>Aged for 21 years in Caribbean rum casks, this single malt offers a rich and complex flavor profile with notes of fig, ginger, and lime.</p>
-                        <a href="javascript:void(0);" onclick="openWhatsApp('Glenfiddich 21 Year')" class="whatsapp-order-btn">Order via WhatsApp</a>
+                        <h3>Moët & Chandon Impérial Brut</h3>
+                         <p>The iconic house champagne, Impérial Brut is celebrated for its bright fruitiness, seductive palate, and elegant maturity. Perfect for any celebration.</p>
+                         <a href="javascript:void(0);" onclick="openWhatsApp('Moët & Chandon Impérial Brut')" class="whatsapp-order-btn">Order via WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                     <div class="product-image">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/hennessy-vsop.jpg" alt="Hennessy V.S.O.P Privilège" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                         <h3>Hennessy V.S.O.P Privilège</h3>
+                         <p>A balanced and harmonious cognac, Hennessy V.S.O.P expresses 200 years of craftsmanship with rich, smooth notes of vanilla, clove, and cinnamon.</p>
+                         <a href="javascript:void(0);" onclick="openWhatsApp('Hennessy V.S.O.P Privilège')" class="whatsapp-order-btn">Order via WhatsApp</a>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/sj-gvauMdAOfKI-unsplash.jpg" alt="Clase Azul Reposado" loading="lazy">
+                         <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/jameson-irish-whiskey.jpg" alt="Jameson Irish Whiskey" loading="lazy">
                     </div>
                     <div class="product-info">
-                        <h3>Clase Azul Reposado</h3>
-                        <p>This ultra-premium tequila is aged for eight months in oak barrels, resulting in a smooth and sophisticated taste with hints of vanilla and caramel.</p>
-                        <a href="javascript:void(0);" onclick="openWhatsApp('Clase Azul Reposado')" class="whatsapp-order-btn">Order via WhatsApp</a>
-                    </div>
+                        <h3>Jameson Irish Whiskey</h3>
+                        <p>Triple distilled for exceptional smoothness, Jameson offers a perfect balance of spicy, nutty, and vanilla notes with hints of sweet sherry.</p>
+                         <a href="javascript:void(0);" onclick="openWhatsApp('Jameson Irish Whiskey')" class="whatsapp-order-btn">Order via WhatsApp</a>
+                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/thimo-van-leeuwen-m5qmB09YT7A-unsplash.jpg" alt="Hennessy Paradis Imperial" loading="lazy">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/olmeca-gold-tequila.jpg" alt="Olmeca Tequila Gold" loading="lazy">
                     </div>
                     <div class="product-info">
-                        <h3>Hennessy Paradis Imperial</h3>
-                        <p>Crafted from a blend of the finest eaux-de-vie, this cognac offers an unparalleled sensory experience with its delicate floral aromas and velvety smooth finish.</p>
-                        <a href="javascript:void(0);" onclick="openWhatsApp('Hennessy Paradis Imperial')" class="whatsapp-order-btn">Order via WhatsApp</a>
+                        <h3>Olmeca Tequila Gold</h3>
+                        <p>A smooth, high-quality tequila with a sweet and slightly woody flavor. Ideal for shots or as the base for your favorite cocktails. Other varieties available.</p>
+                        <a href="javascript:void(0);" onclick="openWhatsApp('Olmeca Tequila Gold')" class="whatsapp-order-btn">Order via WhatsApp</a>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- <div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/nederburg-cabernet-sauvignon.jpg" alt="Nederburg Cabernet Sauvignon" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Nederburg Cabernet Sauvignon</h3>
+        <p>From one of South Africa's most awarded wineries, this full-bodied red wine boasts flavors of ripe fruit and dark cherry with a smooth finish.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Nederburg Cabernet Sauvignon')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div> -->
+
+<!-- <div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/robertson-winery-sweet.jpg" alt="Robertson Winery Natural Sweet" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Robertson Winery Natural Sweet</h3>
+        <p>A range of delightfully smooth, fruity, and easy-drinking sweet wines. Available in both Natural Sweet Red and White to suit any palate.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Robertson Winery Natural Sweet')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div> -->
+
+<!-- <div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/heineken-24-pack.jpg" alt="Heineken Lager Beer (24 Pack)" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Heineken Lager Beer (24 Pack)</h3>
+        <p>Enjoy the world-renowned crisp and refreshing taste of Heineken. This 24-bottle pack is perfect for sharing with friends or stocking up for an event.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Heineken Lager Beer 24 Pack')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div> -->
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0028.jpg" alt="Martel VSOP 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Martel VSOP 100cl</h3>
+        <p>Experience the exquisite taste of Martel VSOP, a refined cognac known for its rich aromas and smooth finish. Perfect for discerning palates.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Martel VSOP 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0027.jpg" alt="Singleton 18yrs" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Singleton 18yrs</h3>
+        <p>Discover the smooth and rich character of Singleton 18 Year Old, a beautifully balanced single malt Scotch whisky with layers of fruit, nuts, and spice.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Singleton 18yrs')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0026.jpg" alt="Aberlour 12yrs" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Aberlour 12yrs</h3>
+        <p>Savor the rich and complex flavors of Aberlour 12 Year Old, a classic Speyside single malt Scotch whisky matured in both sherry and bourbon casks.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Aberlour 12yrs')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0025.jpg" alt="Bombay Dry Gin 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Bombay Dry Gin 100cl</h3>
+        <p>A timeless classic, Bombay Dry Gin offers a perfect balance of juniper and citrus notes. Ideal for crafting crisp and refreshing cocktails.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Bombay Dry Gin 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0024.jpg" alt="Malibu Caribbean Rum 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Malibu Caribbean Rum 100cl</h3>
+        <p>Embrace the taste of the Caribbean with Malibu Rum, a smooth and sweet coconut-flavored rum perfect for tropical cocktails or enjoying on its own.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Malibu Caribbean Rum 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0023.jpg" alt="Imperial Blue Whiskey 75cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Imperial Blue Whiskey 75cl</h3>
+        <p>Enjoy the smooth and mellow taste of Imperial Blue Whiskey. This 75cl bottle offers a classic blend, perfect for any occasion.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Imperial Blue Whiskey 75cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0022.jpg" alt="Johnnie Walker Blue Label 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Johnnie Walker Blue Label 100cl</h3>
+        <p>Experience the pinnacle of blended Scotch whisky with Johnnie Walker Blue Label. An unrivaled masterpiece, exceptionally smooth and complex.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Johnnie Walker Blue Label 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0021.jpg" alt="Red Bull 250ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Red Bull 250ml</h3>
+        <p>Ignite your day with Red Bull Energy Drink. This 250ml can provides a powerful boost of energy and focus for when you need it most.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Red Bull 250ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0020.jpg" alt="Heineken Cans 500ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Heineken Cans 500ml</h3>
+        <p>Enjoy the crisp, refreshing taste of Heineken in a convenient 500ml can. Perfect for any gathering or a relaxing moment.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Heineken Cans 500ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0019.jpg" alt="Savanna Cider Dry 330ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Savanna Cider Dry 330ml</h3>
+        <p>Crisp, clear, and uniquely South African, Savanna Dry Cider offers a refreshing apple taste with a distinct dry finish. Perfect for any occasion.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Savanna Cider Dry 330ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0018.jpg" alt="Grey Goose 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Grey Goose 100cl</h3>
+        <p>Experience the exceptionally smooth and pure taste of Grey Goose Vodka. Crafted from the finest French ingredients, it's perfect for any cocktail.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Grey Goose 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0017.jpg" alt="Chivas 15yrs" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Chivas 15yrs</h3>
+        <p>Indulge in the rich and fruity notes of Chivas XV, a 15-year-old blended Scotch whisky finished in Grande Champagne Cognac casks, offering a luxurious and velvety experience.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Chivas 15yrs')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0016.jpg" alt="Red Bull 250ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Red Bull 250ml</h3>
+        <p>Ignite your day with Red Bull Energy Drink. This 250ml can provides a powerful boost of energy and focus for when you need it most.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Red Bull 250ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0015.jpg" alt="Sweet Wines 75cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Sweet Wines 75cl</h3>
+        <p>Indulge in the delightful sweetness of our selection of sweet wines. Perfect for desserts or as a delightful aperitif.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Sweet Wines 75cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0014.jpg" alt="Sparkling Wine" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Sparkling Wine</h3>
+        <p>Celebrate any moment with our exquisite Sparkling Wine. Its effervescent bubbles and delightful flavors make it perfect for toasts and festivities.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Sparkling Wine')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0013.jpg" alt="Glenmorangie 10yrs 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Glenmorangie 10yrs 100cl</h3>
+        <p>Experience the original masterpiece, Glenmorangie 10 Year Old. A delicate and creamy single malt Scotch whisky, celebrated for its citrus and vanilla notes.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Glenmorangie 10yrs 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0012.jpg" alt="Nederburgs 750ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Nederburgs 750ml</h3>
+        <p>Explore the acclaimed range of Nederburg wines. This 750ml bottle offers a taste of South African winemaking excellence, perfect for any occasion.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Nederburgs 750ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0011.jpg" alt="Remy Martini VSOP 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Remy Martini VSOP 100cl</h3>
+        <p>Indulge in the harmonious and rich flavors of Rémy Martin VSOP. This fine champagne cognac is known for its perfect balance of fruit, floral, and oak notes.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Remy Martini VSOP 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0010.jpg" alt="Johnnie Walker Double Black and Black Label 1000ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Johnnie Walker Double Black and Black Label 1000ml</h3>
+        <p>Explore the iconic depth of Johnnie Walker with both Double Black and Black Label. Experience the smoky intensity of Double Black and the classic, smooth character of Black Label in 1000ml bottles.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Johnnie Walker Double Black and Black Label 1000ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0009.jpg" alt="The Singleton Scotch Whiskey" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>The Singleton Scotch Whiskey</h3>
+        <p>A beautifully balanced single malt Scotch whisky from The Singleton, known for its smooth, rich, and approachable character.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('The Singleton Scotch Whiskey')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0008.jpg" alt="Bacardi Gold and White Rum 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Bacardi Gold and White Rum 100cl</h3>
+        <p>Discover the versatile world of Bacardi with both Gold and White Rum. Bacardi Superior (White) is perfect for classic cocktails, while Bacardi Gold offers a richer, smoother profile for sipping or mixed drinks.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Bacardi Gold and White Rum 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0007.jpg" alt="Southern Comfort 1000ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Southern Comfort 1000ml</h3>
+        <p>Enjoy the unique and smooth blend of fruit, spice, and whiskey flavors with Southern Comfort. This 1000ml bottle is perfect for mixing cocktails or sipping neat.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Southern Comfort 1000ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0006.jpg" alt="Moët & Chandon Ice Impérial" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Moët & Chandon Ice Impérial</h3>
+        <p>Experience the innovative Moët & Chandon Ice Impérial, specially crafted to be enjoyed over ice. A refreshing and vibrant champagne perfect for sunny days.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Moët & Chandon Ice Impérial')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0005.jpg" alt="Jack Daniel's Whiskey 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Jack Daniel's Whiskey 100cl</h3>
+        <p>Savor the iconic taste of Jack Daniel's Old No. 7 Tennessee Whiskey. Smooth, mellow, and distinctively charcoal-mellowed, it's a true American classic.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Jack Daniel\'s Whiskey 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0004.jpg" alt="Robertson Sweet Wines 750ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Robertson Sweet Wines 750ml</h3>
+        <p>Enjoy the delightful and approachable sweetness of Robertson Winery's sweet wines. Perfect for those who appreciate a softer, fruitier wine experience.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Robertson Sweet Wines 750ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0003.jpg" alt="Olmeca Tequilas" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Olmeca Tequilas</h3>
+        <p>Discover the vibrant and authentic taste of Olmeca Tequila. Crafted from blue agave, it's perfect for shots, margaritas, and a variety of cocktails.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Olmeca Tequilas')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0002.jpg" alt="Veuve Clicquot Brut 750ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Veuve Clicquot Brut 750ml</h3>
+        <p>Celebrate with the iconic Veuve Clicquot Brut Yellow Label. This classic champagne offers a perfect balance of aromatic intensity and freshness, renowned for its golden-yellow hue and lively bubbles.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Veuve Clicquot Brut 750ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0001.jpg" alt="Clase Azul Tequila 750ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Clase Azul Tequila 750ml</h3>
+        <p>Experience the ultra-premium taste of Clase Azul Tequila, renowned for its distinctive ceramic decanter and exceptionally smooth, rich flavor profile. A true masterpiece of Mexican craftsmanship.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Clase Azul Tequila 750ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250606-WA0000.jpg" alt="Moët & Chandon Brut 750ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Moët & Chandon Brut 750ml</h3>
+        <p>Celebrate with the iconic Moët & Chandon Impérial Brut. This classic champagne embodies the house's style, known for its vibrant fruitiness, seductive palate, and elegant maturity.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Moët & Chandon Brut 750ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250528-WA0006.jpg" alt="Nederburgs Cabernet Sauvignon 750ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Nederburgs Cab Sav 750ml</h3>
+        <p>Savor the robust and complex flavors of Nederburg Cabernet Sauvignon. This 750ml bottle offers a rich red wine experience, perfect for pairing with hearty meals.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Nederburgs Cab Sav 750ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250528-WA0007.jpg" alt="Jameson Whiskey 100cl" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Jameson Whiskey 100cl</h3>
+        <p>Enjoy the smooth and iconic taste of Jameson Irish Whiskey. Triple-distilled for exceptional smoothness, it's perfect neat, on the rocks, or in your favorite cocktail.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Jameson Whiskey 100cl')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAAACADs=" data-src="assets/IMG-20250528-WA0005.jpg" alt="Heineken Bottles 330ml" loading="lazy">
+    </div>
+    <div class="product-info">
+        <h3>Heineken Bottles 330ml</h3>
+        <p>Enjoy the classic, crisp taste of Heineken Lager Beer in convenient 330ml bottles. Perfect for refreshing moments and sharing with friends.</p>
+        <a href="javascript:void(0);" onclick="openWhatsApp('Heineken Bottles 330ml')" class="whatsapp-order-btn">Order via WhatsApp</a>
+    </div>
+</div>
 
                 <div class="products-grid-nav-arrow">
                     <i class="fas fa-arrow-right"></i>

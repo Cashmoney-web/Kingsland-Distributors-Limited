@@ -225,3 +225,208 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Function to shuffle an array (Fisher-Yates algorithm)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // ES6 swap
+    }
+    return array;
+}
+
+// Function to randomize product order
+function randomizeProducts() {
+    const productsGridContainer = document.querySelector('.products-grid-container');
+    if (!productsGridContainer) {
+        console.warn('Products grid container not found.');
+        return;
+    }
+
+    // Get all product cards
+    let productCards = Array.from(productsGridContainer.querySelectorAll('.product-card'));
+
+    // Shuffle the array of product cards
+    productCards = shuffleArray(productCards);
+
+    // Clear the current grid (optional, but ensures clean re-insertion)
+    // Or, simply remove the arrow and re-add it at the end if desired.
+    // For simplicity, let's just clear and re-append all.
+    productsGridContainer.innerHTML = '';
+
+    // Re-append the shuffled product cards to the container
+    productCards.forEach(card => {
+        productsGridContainer.appendChild(card);
+    });
+
+    // Re-add the navigation arrow if it was removed
+    // (assuming it's the last child in your products-grid-container)
+    const navArrow = document.createElement('div');
+    navArrow.className = 'products-grid-nav-arrow';
+    navArrow.innerHTML = '<i class="fas fa-arrow-right"></i>';
+    productsGridContainer.appendChild(navArrow);
+}
+
+// Ensure the function runs after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Call the randomizeProducts function when the page loads
+    randomizeProducts();
+
+    // The existing lazy loading script (if you added it based on previous suggestions)
+    const lazyImages = document.querySelectorAll("img[data-src]");
+
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    } else {
+        lazyImages.forEach(function(lazyImage) {
+            lazyImage.src = lazyImage.dataset.src;
+        });
+    }
+
+    // Existing openWhatsApp function (ensure your actual number is here)
+    function openWhatsApp(productName) {
+        const phoneNumber = "+256785774627"; // Replace with your actual WhatsApp number, including country code (e.g., +256 for Uganda)
+        const message = `I would like to inquire about ordering ${productName}.`;
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    }
+});
+
+// --- Product Search Functionality ---
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('productSearch');
+    const productCards = document.querySelectorAll('.product-card'); // Get all product cards
+
+    if (searchInput) {
+        searchInput.addEventListener('keyup', (event) => {
+            const searchTerm = event.target.value.toLowerCase().trim(); // Get search term, convert to lowercase, remove leading/trailing spaces
+
+            productCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+
+                // Check if the search term is found in the title or description
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = ''; // Show the card (reset to default display)
+                } else {
+                    card.style.display = 'none'; // Hide the card
+                }
+            });
+        });
+    }
+
+    // --- Existing randomizer function (ensure this is present from earlier steps) ---
+    // Function to shuffle an array (Fisher-Yates algorithm)
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]; // ES6 swap
+        }
+        return array;
+    }
+
+    // Function to randomize product order
+    function randomizeProducts() {
+        const productsGridContainer = document.querySelector('.products-grid-container');
+        if (!productsGridContainer) {
+            console.warn('Products grid container not found.');
+            return;
+        }
+
+        // Get all product cards
+        let productCardsArray = Array.from(productsGridContainer.querySelectorAll('.product-card'));
+
+        // Shuffle the array of product cards
+        productCardsArray = shuffleArray(productCardsArray);
+
+        // Clear the current grid (optional, but ensures clean re-insertion)
+        productsGridContainer.innerHTML = '';
+
+        // Re-append the shuffled product cards to the container
+        productCardsArray.forEach(card => {
+            productsGridContainer.appendChild(card);
+        });
+
+        // Re-add the navigation arrow if it was removed
+        const navArrow = document.createElement('div');
+        navArrow.className = 'products-grid-nav-arrow';
+        navArrow.innerHTML = '<i class="fas fa-arrow-right"></i>';
+        productsGridContainer.appendChild(navArrow);
+    }
+
+    // Call the randomizeProducts function when the page loads
+    // Make sure this is called AFTER the product cards are loaded, usually fine with DOMContentLoaded
+    randomizeProducts();
+
+
+    // --- Existing Lazy Loading Script (if you added it based on previous suggestions) ---
+    const lazyImages = document.querySelectorAll("img[data-src]");
+
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    } else {
+        lazyImages.forEach(function(lazyImage) {
+            lazyImage.src = lazyImage.dataset.src;
+        });
+    }
+
+    // --- Existing openWhatsApp function (ensure your actual number is here) ---
+    // Make sure this function is globally accessible if called from onclick in HTML
+    window.openWhatsApp = function(productName) {
+        const phoneNumber = "+256785774627"; // Replace with your actual WhatsApp number, including country code (e.g., +256 for Uganda)
+        const message = `I would like to inquire about ordering ${productName}.`;
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    }
+});
+
+// In your main.js file, inside the document.addEventListener('DOMContentLoaded', ...) block
+
+// --- Animated Underline (Premium Spirits) ---
+const premiumSpiritsPath = document.querySelector('.products-hero-left h1 .highlight .animated-underline path');
+
+if (premiumSpiritsPath) {
+    // Get the total length of the path (important for stroke-dashoffset animation)
+    const pathLength = premiumSpiritsPath.getTotalLength();
+
+    // Set initial state: line is completely hidden
+    premiumSpiritsPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    premiumSpiritsPath.style.strokeDashoffset = pathLength;
+
+    // Animate the drawing of the line
+    gsap.to(premiumSpiritsPath, {
+        strokeDashoffset: 0, // Animate to 0 to "draw" the line
+        duration: 1.5, // How long the drawing animation takes
+        delay: 0.8, // Delay after the text appears
+        ease: 'power2.out', // Smooth easing for the drawing
+        scrollTrigger: { // Use ScrollTrigger to play animation when section enters view
+            trigger: '.products-hero-section', // When this section comes into view
+            start: 'top 80%', // Start animation when top of section is 80% from viewport top
+            // You can add markers: true to debug ScrollTrigger positioning
+        }
+    });
+}
